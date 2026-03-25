@@ -1,0 +1,56 @@
+# 服务器配置
+server:
+  port: 8080  # 项目启动端口
+  servlet:
+    context-path: /api  # 接口统一前缀，如：http://localhost:8080/api/user/login
+
+# Spring配置
+spring:
+  # 数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 替换为你的数据库地址/用户名/密码，mall_admin是数据库名（需先创建）
+    url: jdbc:mysql://localhost:3306/mall_admin?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root  # 你的MySQL用户名
+    password: 123456  # 你的MySQL密码
+  # 文件上传配置（后续商品图片上传用）
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+    # 解决 Swagger 与 Spring Boot 2.6+ 路径匹配冲突
+    mvc:
+      pathmatch:
+        matching-strategy: ant_path_matcher
+  redis:
+    host: localhost
+    port: 6379
+
+# MyBatis Plus 配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.ljl.entity
+
+# Knife4j 接口文档配置
+knife4j:
+  enable: true
+  openapi:
+    title: 商城后台管理系统 API
+    description: 商城后台管理系统的核心接口文档
+    version: 1.0.0
+    contact:
+      name: ljl
+      email: your-email@example.com
+
+# 系统配置
+system:
+  admin:
+    password: '$2a$10$7JB720yubVSbXyM9vLzYe.duYrcvXF7un7O5FhDDeSiid01qvf1Hu'
+
+# JWT 配置
+jwt:
+  secret: abcdefghijklmnopqrstuvwxyz1234567890abcdef
+  expire: 7200000

@@ -1,0 +1,207 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 表单卡片样式 */
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.form-card h3 {
+    color: #409eff;
+    margin-bottom: 20px;
+    border-left: 4px solid #409eff;
+    padding-left: 10px;
+}
+
+.form-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-item label {
+    width: 100px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-item input {
+    flex: 1;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-item input:focus {
+    outline: none;
+    border-color: #409eff;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #409eff;
+    color: white;
+}
+
+.reset-btn {
+    background-color: #666;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #67c23a;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f56c6c;
+    color: white;
+}
+
+/* 列表卡片样式 */
+.list-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.list-card h3 {
+    color: #333;
+    margin-bottom: 20px;
+    border-left: 4px solid #67c23a;
+    padding-left: 10px;
+}
+
+#category-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#category-table th,
+#category-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+}
+
+#category-table th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#category-table tr:hover {
+    background-color: #f5f7fa;
+}
+/* 退出按钮样式 */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f56c6c;
+    color: white;
+}
+
+/* 适配登录后页面的布局 */
+.container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* 导航栏样式 */
+.nav-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #e6e6e6;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav-link.active {
+    background-color: #409eff;
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: #d0e8ff;
+}
+
+.nav-link.active:hover {
+    background-color: #3393ff;
+}
+
+/* 搜索栏样式 */
+.search-bar {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #409eff;
+}
+
+.search-btn {
+    background-color: #409eff;
+    color: white;
+}
+
+.reset-search-btn {
+    background-color: #666;
+    color: white;
+}
